@@ -1,7 +1,7 @@
 exports.authenticatePakage = (req, res, next) => {
   if (!req.headers.authorization) {
     return res.status(401).json({
-      message: "pratik try again........."
+      message: "you are not authorised to access"
     });
 }
     try {
