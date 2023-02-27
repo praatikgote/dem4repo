@@ -3,8 +3,8 @@ const User = require('../models/userModel');
 exports.authentication = async (req, res) => {
   try {
     let {deviceId, androidVersion, deviceBrand, deviceToken} = req.body;
-    if (!deviceId && !androidVersion && !deviceBrand && !deviceToken){
-      throw Error("Couldn't get all require fileds");
+    if (!deviceId || !androidVersion || !deviceBrand || !deviceToken){
+      throw new Error("Couldn't get all require fileds");
     }
     const userExist = await User.findOne({deviceId});
     if(userExist){
@@ -35,7 +35,10 @@ exports.authentication = async (req, res) => {
     });
   }
   } catch (err) {
-    res.status(500).json(err)
+    res.status(400).json({
+      err: err.message
+    }
+      )
   }
 }
 

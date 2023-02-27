@@ -102,4 +102,9 @@ exports.updateDownload = async (req, res) =>{
     res.status(500).json(err)
   }
 }
-
+// exports.update = async(req, res) =>{
+//   const wallpaper = await Wallpaper.updateMany({price: "0"},{price: "22"});
+//   res.status(200).json({
+//     wallpaper
+//   })
+// }

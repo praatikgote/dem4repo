@@ -11,4 +11,5 @@ router.post('/',upload.array('files'), wallpaperController.create);
 router.get('/', authenticatePakage ,wallpaperController.read)
 router.get('/home', authenticatePakage, wallpaperController.home)
 router.post('/updateDownload/:id', authenticatePakage, wallpaperController.updateDownload)
+// router.get('/update', wallpaperController.update);
 module.exports = router;
