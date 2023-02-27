@@ -3,6 +3,9 @@ const User = require('../models/userModel');
 exports.authentication = async (req, res) => {
   try {
     let {deviceId, androidVersion, deviceBrand, deviceToken} = req.body;
+    if (!deviceId && !androidVersion && !deviceBrand && !deviceToken){
+      throw Error("Couldn't get all require fileds");
+    }
     const userExist = await User.findOne({deviceId});
     if(userExist){
       userExist.deviceToken = deviceToken;
