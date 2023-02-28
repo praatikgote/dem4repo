@@ -23,9 +23,9 @@ artifacts:
     - controllers/**/*
     - database/**/*
     - middleware/**/*
-    - models/**/*
-    - routes/**/*       
     - helper/**/*
+    - models/**/*
+    - routes/**/*
     - package.json
     - server.js
     - appspec.yml
