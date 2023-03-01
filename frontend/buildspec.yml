@@ -12,15 +12,9 @@ phases:
       - npm run build
 artifacts:
   files:
-    - controllers/**/*
-    - database/**/*
-    - middleware/**/*
-    - helper/**/*
-    - models/**/*
-    - routes/**/*
-    - package.json
-    - server.js
-    - appspec.yml
-    - scripts/**/*
+    - 'public/**/*'
+    - 'scr/**/*'
+    - 'package.json'
+    - 'appspec.yml'
+    - 'scripts/**/*'
   base-directory: 'build/'
-
