@@ -1,3 +1,0 @@
-#!/bin/bash
-echo Building frontend...
-npm run build
