@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 12
+    commands:
+      - cd backend
+      - npm install
+  build:
+    commands:
+      - npm run build
+
+artifacts:
+  files:
+    - 'controllers/**/*'
+    - 'database/**/*'
+    - 'helper/**/*'
+    - 'middleware/**/*'
+    - 'models/**/*'
+    - 'routes/**/*'
+    - 'uploads/**/*'
+    - 'server.js/**/*'
+    - 'package.js/**/*'
